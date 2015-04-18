@@ -27,6 +27,7 @@ module Youtrack
       def prepare_options(options={})
         options[:headers] ||= {}
         options[:headers]['Cookie'] = service.cookies['Cookie']
+        options[:headers]["Accept"] = "application/json"
         options
       end
       
